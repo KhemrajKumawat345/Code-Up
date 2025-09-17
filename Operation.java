@@ -148,14 +148,33 @@ public class Operation{
         }
     }
     public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1. Expand the string.\n2. Frequency of a Character.\n3. maximum length of a substring. \n4. Check No. prime or not. \n5. Print in String of a no.");
+        System.out.print("Enter a number of operation : ");
+        int operation = sc.nextInt();
         try{
-            Scanner sc = new Scanner(System.in);
-            System.out.print("Enter a No. : ");
-            // System.out.print("Enter a String : ");
-            int num = sc.nextInt();
-            // String str = sc.next();
-            //subString(str);
-            inString(num);
+            switch(operation){
+                case 1 : System.out.print("Enter a string : ");
+                         String str1 = sc.next();
+                         expand(str1);
+                         break;
+                case 2 : System.out.print("Enter a string : ");
+                         String str2 = sc.next();
+                         getFrequency(str2);
+                         break;
+                case 3 : System.out.print("Enter a string : ");
+                         String str3 = sc.next();
+                         subString(str3);
+                         break;
+                case 4 : System.out.print("Enter a number : ");
+                         int num1 = sc.nextInt();
+                         isPrime(num1);
+                         break;
+                case 5 : System.out.print("Enter a number : ");
+                         int num2 = sc.nextInt();
+                         inString(num2);
+                         break;
+            }
         }
         catch(Exception e){
             System.out.println("Given input is not valid");
